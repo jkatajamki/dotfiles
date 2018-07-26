@@ -92,7 +92,7 @@ export PATH=$PATH:~/Apps/android-sdk-linux/tools:~/Apps/android-sdk-linux/platfo
 # see https://getcomposer.org/doc/articles/troubleshooting.md#xdebug-impact-on-composer
 export COMPOSER_DISABLE_XDEBUG_WARN=1
 
-DEFAULT_USER="kalle"
+DEFAULT_USER="johannes"
 
 say() {
     espeak "$@" 2>/dev/null;

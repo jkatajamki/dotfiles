@@ -19,10 +19,6 @@ export EDITOR="$VISUAL"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias composer="noglob composer"
-alias npm="noglob npm"
-alias xphp="php -d xdebug.remote_autostart=1"
-alias suplemon="python3 ~/Apps/suplemon/main.py"
 
 alias fuck='$(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
@@ -167,14 +163,14 @@ alias ll="exa -l --git --time-style=long-iso --group-directories-first"
 alias l="exa -la --git --time-style=long-iso --group-directories-first"
 alias la="exa -lahg --git --time-style=long-iso --group-directories-first"
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-###-begin-ng-completion### 
+###-begin-ng-completion###
 #
 # ng command completion script
 #
@@ -229,7 +225,7 @@ elif type compctl &>/dev/null; then
       g|generate) opts=$generate_opts ;;
       test) opts=$test_opts ;;
     esac
-    
+
     setopt shwordsplit
     reply=($opts)
     unset shwordsplit
@@ -256,7 +252,7 @@ fd() {
 # zsh autoload function
 cf() {
   local file
-  
+
   file="$(locate -Ai -0 $@ | grep -z -vE '~$' | fzf --read0 -0 -1)"
 
   if [[ -n $file ]]
@@ -352,4 +348,3 @@ bind-git-helper() {
 
 bind-git-helper f b t r h
 unset -f bind-git-helper
-
